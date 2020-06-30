@@ -18,7 +18,7 @@ export async function run() {
     if (process.platform === "darwin") {
       await execShellCommand('brew install tmate');
     } else {
-      await execShellCommand(optionalSudoPrefix + 'yum update');
+      await execShellCommand(optionalSudoPrefix + 'yum update -y');
       await execShellCommand(optionalSudoPrefix + 'yum install -y tmate openssh-clients');
     }
     core.debug("Installed dependencies successfully");

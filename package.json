@@ -21,7 +21,8 @@
   "author": "GitHub",
   "license": "MIT",
   "dependencies": {
-    "@actions/core": "^1.2.3"
+    "@actions/core": "^1.2.3",
+    "shelljs": "^0.8.4"
   },
   "devDependencies": {
     "@babel/core": "^7.8.7",

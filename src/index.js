@@ -25,6 +25,7 @@ export async function run() {
 
     core.debug("Generating SSH keys")
     try {
+      await execShellCommand(`mkdir -p ~/.ssh`);
       await execShellCommand(`echo -e 'y\n'|ssh-keygen -q -t rsa -N "" -f ~/.ssh/id_rsa`);
     } catch { }
     core.debug("Generated SSH-Key successfully")
